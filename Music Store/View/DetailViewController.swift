@@ -28,14 +28,14 @@ class DetailView: UIViewController {
     
     @IBOutlet weak var addToBucketButton: UIButton!
     
+    @IBOutlet weak var countOfGood: UILabel!
+    
+    
+    @IBOutlet weak var decreaseGoodButton: UIButton!
+    
     //MARK: - IBActions
     
-   
-    @IBAction func searchButtonTapped(_ sender: Any) {
-        let alertView = alertService.alert()
-        
-        present(alertView, animated: true)
-    }
+
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         let alertView = alertService.alert()
@@ -47,6 +47,16 @@ class DetailView: UIViewController {
         let alertView = alertService.alert()
         
         present(alertView, animated: true)
+    }
+    
+    
+    @IBAction func increaseGoodButtonTapped(_ sender: Any) {
+        detailViewModel?.increaseGood(button: decreaseGoodButton, countOfGoodLabel: countOfGood)
+        
+    }
+    
+    @IBAction func decreaseGoodButtonTapped(_ sender: Any) {
+        detailViewModel?.decreaseGood(button: decreaseGoodButton, countOfGoodLabel: countOfGood)
     }
     
     
@@ -79,6 +89,8 @@ class DetailView: UIViewController {
         addToBucketButton.layer.cornerRadius = 15
         addToBucketButton.layer.masksToBounds = true
     }
+    
+    
     /*
     // MARK: - Navigation
 

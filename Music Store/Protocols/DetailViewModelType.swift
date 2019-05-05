@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
 
 protocol DetailViewModelType {
     
@@ -18,5 +20,9 @@ protocol DetailViewModelType {
     var artist: String { get }
     var isFavorite: Bool { get }
     var image: String { get }
+    
+    func increaseGood(button: UIButton, countOfGoodLabel: UILabel)
+    
+    func decreaseGood(button: UIButton, countOfGoodLabel: UILabel)
     
 }

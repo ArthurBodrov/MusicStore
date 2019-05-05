@@ -18,6 +18,12 @@ struct Album {
     var releaseDate: Int
     var label: String
     var description: String
+    
+    subscript(name: String) -> String{
+        get {
+           return name
+        }
+    }
 
     init(name: String, price: Int, artist: String, isFavorite: Bool = false, image: String, releaseDate: Int, label: String, description: String) {
         self.name = name

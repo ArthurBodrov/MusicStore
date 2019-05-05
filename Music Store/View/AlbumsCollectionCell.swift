@@ -24,8 +24,8 @@ class AlbumsCollectionCell: UICollectionViewCell {
     @IBOutlet weak var detailButton: UIButton!
     
     //MARK: - IBActions
-    @IBAction func likeButtonTapped(_ sender: UIButton) {
-    }
+ 
+  
     
     
     weak var cellViewModel: CollectionCellViewModelType? {

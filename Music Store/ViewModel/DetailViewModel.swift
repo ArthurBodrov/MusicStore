@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class DetailViewModel: DetailViewModelType {
     
@@ -46,5 +47,25 @@ class DetailViewModel: DetailViewModelType {
     
     init(album: Album) {
         self.album = album
+    }
+    
+    var countOfGood: Int = 1
+    
+    func increaseGood(button: UIButton, countOfGoodLabel: UILabel) {
+        countOfGood += 1
+        if countOfGood == 2 {
+            button.setImage(UIImage(named: "Combined Shape Copy 9"), for: .normal)
+        }
+        countOfGoodLabel.text = "\(countOfGood)"
+    }
+    
+    func decreaseGood(button: UIButton, countOfGoodLabel: UILabel){
+        if countOfGood == 1 {
+            countOfGood = 1
+            button.setImage(UIImage(named: "Combined Shape Copy 2"), for: .normal)
+        } else {
+            countOfGood -= 1
+        }
+        countOfGoodLabel.text = "\(countOfGood)"
     }
 }

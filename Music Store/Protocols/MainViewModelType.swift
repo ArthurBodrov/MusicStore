@@ -18,4 +18,20 @@ protocol MainViewModelType {
     
     func selectItem(atIndexPath indexPath: IndexPath)
     
+    func sortByNameFromAtoZ()
+
+    func sortByNameFromZtoA()
+    
+    func sortByPriceFromLowToHigh()
+
+    func sortByPriceFromHighToLow()
+    
+    func sortByReleaseDateFromNewToOld()
+    
+    func sortByReleaseDateFromOldtoNew()
+    
+    func hiddenButton(_ shape: UIImageView, _ button: UIButton, _ color: String)
+    
+    func showButton(_ shape: UIImageView, _ button: UIButton, _ color: String)
+    
 }
